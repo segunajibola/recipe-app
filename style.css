@@ -5,6 +5,7 @@
 body {
     background: linear-gradient(to right, #ffffff, #ece9e6);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0;

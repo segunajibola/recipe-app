@@ -1,7 +1,5 @@
 const meals = document.getElementById("meals");
 
-getRandomMeal();
-
 async function getRandomMeal() {
     const resp = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
     
@@ -9,8 +7,13 @@ async function getRandomMeal() {
 
     const randomMeal = respData.meals[0];
 
+    console.log(randomMeal)
+
     addMeal(randomMeal, true)
 }
+
+getRandomMeal();
+
 
 async function getMealbyId(id) {
     const meal = await fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id);
@@ -30,7 +33,7 @@ function addMeal(mealData, random = false) {
                     <img src="${mealData.strMealThumb}" alt="${mealData.Meal}">
                 </div>
                 <div class="meal-body">
-                    <h4>${mealData.Meal}</h4>
+                    <h4>${mealData.strMeal}</h4>
                     <button class="fav-btn">
                         <i class="fas fa-heart"></i>
                     </button>

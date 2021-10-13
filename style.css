@@ -128,3 +128,13 @@ header button {
 .meal-body .fav-btn.active {
     color: rebeccapurple;
 }
+
+footer {
+    text-align: center;
+    margin: 50px 0px 10px;
+}
+
+footer p .love {
+    color: red;
+    font-size: 23px;
+}

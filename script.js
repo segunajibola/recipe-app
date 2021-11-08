@@ -61,6 +61,10 @@ function addMeal(mealData, random = false) {
                         btn.classList.add
                     ("active");
                     }
+
+                    // clean the container
+                    favouriteContainer.innerHTML = "";
+                    fetchFavMeals();
                 });
                 
                 meals.appendChild(meal);

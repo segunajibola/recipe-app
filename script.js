@@ -107,5 +107,5 @@ function addMealFav(mealData) {
     favMeal.innerHTML = `<img src="${mealData.strMealThumb}" alt="${mealData.strMeal}"/>
     <span>${mealData.strMeal}</span>`;
 
-    favouriteContainer.apen
+    favouriteContainer.appendChild(favMeal);
 }

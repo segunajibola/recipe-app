@@ -1,5 +1,7 @@
 const meals = document.getElementById("meals");
 const favouriteContainer = document.getElementById("fav-meals");
+const searchTerm = document.getElementById("search-term");
+const search = document.getElementById("search");
 
 
 getRandomMeal();

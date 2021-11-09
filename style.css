@@ -71,6 +71,7 @@ header button {
 .fav-meals li .clear {
     background-color: transparent;
     border: none;
+    cursor: pointer;
     opacity: 0;
     position: absolute;
     top: -0.5rem;
@@ -93,6 +94,11 @@ header button {
 
 .fav-meals li span {
     font-size: 0.9rem;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
 }
 
 .meal {

@@ -36,7 +36,11 @@ function addMeal(mealData, random = false) {
     console.log(mealData);
     
     const meal = document.createElement("div");
+    const span = document.createElement("span");
+
     meal.classList.add("meal");
+    span.classList.add("refresh-btn");
+
 
     meal.innerHTML = `
                 <div class="meal-header">
@@ -45,11 +49,13 @@ function addMeal(mealData, random = false) {
                 </div>
                 <div class="meal-body">
                     <h4>${mealData.strMeal}</h4>
+                    <span onClick="location.reload()">New meal</span>
                     <button class="fav-btn">
                         <i class="fas fa-heart"></i>
                     </button>
                 </div>
                 `;
+                // refresh-btn.innerHTML = `<span onClick="location.reload()">New meal</span>`;
                 
                 const btn = meal.querySelector(".meal-body .fav-btn");
                 btn.addEventListener("click", () => {

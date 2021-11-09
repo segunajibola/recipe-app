@@ -166,6 +166,41 @@ header button {
     color: rebeccapurple;
 }
 
+.meal-info-container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.meal-info {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.meal-info h1 {
+    text-align: center;
+}
+
+.meal-info .close-popup {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
 footer {
     text-align: center;
     margin: 50px 0px 10px;

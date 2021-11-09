@@ -1,4 +1,4 @@
-const meals = document.getElementById("meals");
+const mealsEl = document.getElementById("meals");
 const favouriteContainer = document.getElementById("fav-meals");
 const searchTerm = document.getElementById("search-term");
 const searchBtn = document.getElementById("search");
@@ -63,7 +63,7 @@ function addMeal(mealData, random = false) {
                 `;
 
                 refreshMeal.classList.add("refresh-btn");
-                
+
                 refreshMeal.innerHTML = `<span onClick="location.reload()">New meal</span>`;
                 
                 const btn = meal.querySelector(".meal-body .fav-btn");
@@ -146,11 +146,15 @@ function addMealFav(mealData) {
 }
 
 searchBtn.addEventListener("click", async () => {
+    // clean container
+    mealsEl.innerHTML = "";
     const search = searchTerm.value;
 
     const meals = await getMealsBySearch(search);
 
-    meals.forEach((meal) => {
-        addMeal(meal);
-    });
+    if (meals) {
+        meals.forEach((meal) => {
+            addMeal(meal);
+        });
+    }
 });

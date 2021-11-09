@@ -49,7 +49,6 @@ function addMeal(mealData, random = false) {
                 </div>
                 <div class="meal-body">
                     <h4>${mealData.strMeal}</h4>
-                    <span onClick="location.reload()">New mgeal</span>
                     <button class="fav-btn">
                         <i class="fas fa-heart"></i>
                     </button>

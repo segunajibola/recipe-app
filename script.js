@@ -63,7 +63,8 @@ function addMeal(mealData, random = false) {
                     }
 
                     // clean the container
-                    favouriteContainer.innerHTML = "";
+                    // favouriteContainer.innerHTML = "";
+                    // location.reload();
                     fetchFavMeals();
                 });
                 
@@ -92,6 +93,8 @@ function getMealsLS() {
 }
 
 async function fetchFavMeals() {
+     // clean the container
+     favouriteContainer.innerHTML = "";
     const mealIds = getMealsLS();
 
     const meals = [];
@@ -109,7 +112,17 @@ function addMealFav(mealData) {
     const favMeal = document.createElement("li");
 
     favMeal.innerHTML = `<img src="${mealData.strMealThumb}" alt="${mealData.strMeal}"/>
-    <span>${mealData.strMeal}</span>`;
+    <span>${mealData.strMeal}</span>
+    <button class="clear"><i class="fas fa-window-close"></i></button>
+    `;
+
+    const btn = favMeal.querySelector(".clear");
+
+    btn.addEventListener("click", () => {
+        removeMealLS(mealData.idMeal);
+
+        fetchFavMeals();
+    });
 
     favouriteContainer.appendChild(favMeal);
 }

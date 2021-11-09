@@ -102,10 +102,25 @@ header button {
 }
 
 .meal {
-    margin: 1.5rem;
+    margin: 1.5rem 1.5rem 0;
     box-shadow: 0 0 10px 2px #3333331a;
     border-radius: 3px;
     overflow: hidden;
+}
+
+.refresh-btn {
+    text-align: center;
+    padding: 5px;  
+}
+
+.refresh-btn span {
+    text-align: center;
+    border: 5px solid red;
+    margin: auto;
+    width: auto;
+    display: inline-block;
+    cursor: pointer;
+
 }
 
 .meal-header {

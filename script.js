@@ -63,9 +63,11 @@ function addMeal(mealData, random = false) {
                 `;
 
                 refreshMeal.classList.add("refresh-btn");
+                
                 refreshMeal.innerHTML = `<span onClick="location.reload()">New meal</span>`;
                 
                 const btn = meal.querySelector(".meal-body .fav-btn");
+
                 btn.addEventListener("click", () => {
                     if (btn.classList.contains("active")) {
                         removeMealLS(mealData.idMeal);
@@ -143,8 +145,12 @@ function addMealFav(mealData) {
     favouriteContainer.appendChild(favMeal);
 }
 
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", async () => {
     const search = searchTerm.value;
 
-    getMealsBySearch(search);
+    const meals = await getMealsBySearch(search);
+
+    meals.forEach((meal) => {
+        addMeal(meal);
+    });
 });

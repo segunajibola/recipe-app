@@ -126,7 +126,6 @@ async function fetchFavMeals() {
         
         addMealFav(meal);
     }
-
 }
 
 function addMealFav(mealData) {
@@ -155,7 +154,9 @@ function showMealInfo(mealData) {
     mealInfoEl.appendChild(mealEl);
 
     mealEl.innerHTML = `
-    `
+            <h1>${mealData.strMeal}</h1>
+            <img src=${mealData.strMealThumb} alt="">
+            <p>${mealData.strInstructions}</p>`
 }
 
 searchBtn.addEventListener("click", async () => {

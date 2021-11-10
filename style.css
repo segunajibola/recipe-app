@@ -201,6 +201,11 @@ header button {
     right: 1rem;
 }
 
+.meal-info-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 footer {
     text-align: center;
     margin: 50px 0px 10px;

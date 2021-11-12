@@ -86,9 +86,14 @@ function addMeal(mealData, random = false) {
                     // location.reload();
                     fetchFavMeals();
                 });
+
+                meal.addEventListener("click", () => {
+                    showMealInfo(mealData);
+                })
                 
-                meals.appendChild(meal);
-                meals.appendChild(refreshMeal);
+                
+                mealsEl.appendChild(meal);
+                mealsEl.appendChild(refreshMeal);
 
 }
 
@@ -148,6 +153,8 @@ function addMealFav(mealData) {
 }
 
 function showMealInfo(mealData) {
+    //clean it up
+    mealData;
     //update meal info
     const mealEl = document.createElement("div");
 

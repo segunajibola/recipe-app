@@ -168,7 +168,7 @@ header button {
     color: rebeccapurple;
 }
 
-.meal-info-container {
+.popup-container {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -191,10 +191,6 @@ header button {
     overflow: auto;
 }
 
-.meal-info h1 {
-    text-align: center;
-}
-
 .popup .close-popup {
     background-color: transparent;
     cursor: pointer;
@@ -205,9 +201,13 @@ header button {
     right: 1rem;
 }
 
-.popup-container.hidden {
+.popup-container .hidden {
     opacity: 0;
     pointer-events: none;
+}
+
+.meal-info h1 {
+    text-align: center;
 }
 
 footer {

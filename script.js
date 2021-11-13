@@ -162,8 +162,6 @@ function showMealInfo(mealData) {
     //update meal info
     const mealEl = document.createElement("div");
 
-
-
     mealInfoEl.appendChild(mealEl);
 
     mealEl.innerHTML = `

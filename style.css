@@ -201,7 +201,7 @@ header button {
     right: 1rem;
 }
 
-.popup-container .hidden {
+.popup-container.hidden {
     opacity: 0;
     pointer-events: none;
 }

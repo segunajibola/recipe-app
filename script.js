@@ -162,12 +162,15 @@ function showMealInfo(mealData) {
     //update meal info
     const mealEl = document.createElement("div");
 
-    mealInfoEl.appendChild(mealEl);
-
     mealEl.innerHTML = `
             <h1>${mealData.strMeal}</h1>
             <img src=${mealData.strMealThumb} alt="${mealData.strMeal}">
             <p>${mealData.strInstructions}</p>`
+
+    mealInfoEl.appendChild(mealEl);
+
+    //show the popup
+    mealPopup.classList.remove("hidden");
 }
 
 searchBtn.addEventListener("click", async () => {

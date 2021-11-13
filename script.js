@@ -162,8 +162,12 @@ function showMealInfo(mealData) {
 
     // get ingredients and measures
     for(let i=1; i<=20; i++) {
-        
-    }
+      if(mealData["strIngredient" + i]) {
+            ingredients.push(`${mealData["strIngredient" + i]} - ${mealData["strMeasure" + i]}`)
+        } else {
+            break;
+        }
+     }
 
     mealEl.innerHTML = `
             <h1>${mealData.strMeal}</h1>

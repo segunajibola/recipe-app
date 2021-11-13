@@ -149,20 +149,26 @@ function addMealFav(mealData) {
         fetchFavMeals();
     });
 
+    favMeal.addEventListener("click", () => {
+        showMealInfo(mealData);
+    })
+
     favouriteContainer.appendChild(favMeal);
 }
 
 function showMealInfo(mealData) {
     //clean it up
-    mealData;
+    mealInfoEl.innerHTML = "";
     //update meal info
     const mealEl = document.createElement("div");
+
+
 
     mealInfoEl.appendChild(mealEl);
 
     mealEl.innerHTML = `
             <h1>${mealData.strMeal}</h1>
-            <img src=${mealData.strMealThumb} alt="">
+            <img src=${mealData.strMealThumb} alt="${mealData.strMeal}">
             <p>${mealData.strInstructions}</p>`
 }
 

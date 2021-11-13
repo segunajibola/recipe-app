@@ -63,6 +63,7 @@ header button {
 }
 
 .fav-meals li {
+    cursor: pointer;
     position: relative;
     margin: 5px;
     width: 75px;
@@ -187,6 +188,7 @@ header button {
     background-color: #fff;
     padding: 0 2rem;
     position: relative;
+    overflow: auto;
 }
 
 .meal-info h1 {

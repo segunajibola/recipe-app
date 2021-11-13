@@ -23,6 +23,7 @@ img {
     border-radius: 3px;
     overflow: hidden;
     width: 400px;
+    margin: 10px;
 }
 
 header {
@@ -116,7 +117,7 @@ header button {
 
 .refresh-btn span {
     text-align: center;
-    border: 2px solid red;
+    border: 2px solid rgb(168, 123, 197);
     margin: 7px;
     width: auto;
     display: inline-block;
@@ -197,7 +198,7 @@ header button {
     font-size: 1.5rem;
     border: none;
     position: absolute;
-    top: 1rem;
+    top: 1.8rem;
     right: 1rem;
 }
 

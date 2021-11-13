@@ -17,8 +17,6 @@ async function getRandomMeal() {
 
     const randomMeal = respData.meals[0];
 
-    console.log(randomMeal)
-
     addMeal(randomMeal, true)
 }
 
@@ -42,9 +40,7 @@ async function getMealsBySearch(term) {
     return meals;
 }
 
-function addMeal(mealData, random = false) {
-    console.log(mealData);
-    
+function addMeal(mealData, random = false) {    
     const meal = document.createElement("div");
     const refreshMeal = document.createElement("div");
 
@@ -162,10 +158,21 @@ function showMealInfo(mealData) {
     //update meal info
     const mealEl = document.createElement("div");
 
+    const ingredients = [];
+
+    // get ingredients and measures
+    for(let i=1; i<=20; i++) {
+        
+    }
+
     mealEl.innerHTML = `
             <h1>${mealData.strMeal}</h1>
             <img src=${mealData.strMealThumb} alt="${mealData.strMeal}">
-            <p>${mealData.strInstructions}</p>`
+            <p>${mealData.strInstructions}</p>
+            <h3>Ingredients:</h3>
+            <ul>
+                ${ingredients.map((ing) => `<li>${ing}</li>`).join("")}
+            </ul>`;
 
     mealInfoEl.appendChild(mealEl);
 

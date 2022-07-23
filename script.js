@@ -46,8 +46,6 @@ function addMeal(mealData, random = false) {
 
     meal.classList.add("meal");
     
-
-
     meal.innerHTML = `
                 <div class="meal-header">
                     ${random ? `<span class="random">Random Recipe</span>` : ""}
